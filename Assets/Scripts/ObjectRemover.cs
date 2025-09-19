@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class ObjectRemover : MonoBehaviour
 {
-    [SerializeField] private ObjectPool _pool;
+    [SerializeField] private EnemyPool _enemyPool;
+    [SerializeField] private BulletPool _bulletPool;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out Pipe pipe))
+        if (other.TryGetComponent(out Enemy enemy))
         {
-            _pool.PutObject(pipe);
+            _enemyPool.PutObject(enemy);
+        }
+        
+        if (other.TryGetComponent(out Bullet bullet))
+        {
+            _bulletPool.PutObject(bullet);
         }
     }
 }

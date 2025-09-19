@@ -1,10 +1,9 @@
-using System;
 using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    [SerializeField] private Bird _bird;
-    [SerializeField] private PipeGenerator _pipeGenerator;
+    [SerializeField] private Plane _plane;
+    [SerializeField] private EnemyGenerator _enemyGenerator;
     [SerializeField] private StartScreen _startScreen;
     [SerializeField] private EndGameScreen _endGameScreen;
 
@@ -12,14 +11,14 @@ public class Game : MonoBehaviour
     {
         _startScreen.PlayButtonClicked += OnPlayButtonClick;
         _endGameScreen.RestartButtonClicked += OnRestartButtonClick;
-        _bird.GameOver += OnGameOver;
+        _plane.GameOver += OnGameOver;
     }
 
     private void OnDisable()
     {
         _startScreen.PlayButtonClicked -= OnPlayButtonClick;
         _endGameScreen.RestartButtonClicked -= OnRestartButtonClick;
-        _bird.GameOver -= OnGameOver;
+        _plane.GameOver -= OnGameOver;
     }
 
     private void Start()
@@ -48,6 +47,6 @@ public class Game : MonoBehaviour
     private void StartGame()
     {
         Time.timeScale = 1;
-        _bird.Reset();
+        _plane.Reset();
     }
 }
