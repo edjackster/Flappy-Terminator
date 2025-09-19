@@ -1791,6 +1791,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plane
       objectReference: {fileID: 0}
+    - target: {fileID: 954607506494950095, guid: c301a2e693ab4d4468fdb6ade6039135, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2588843043571528849, guid: c301a2e693ab4d4468fdb6ade6039135, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4738193656716385279, guid: c301a2e693ab4d4468fdb6ade6039135, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1835,6 +1843,10 @@ PrefabInstance:
       propertyPath: _bulletPool
       value: 
       objectReference: {fileID: 1549372097}
+    - target: {fileID: 7976533300187336916, guid: c301a2e693ab4d4468fdb6ade6039135, type: 3}
+      propertyPath: _mask.m_Bits
+      value: 129
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
